@@ -1,0 +1,148 @@
+@keyframes leftSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  80% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightSlide {
+  0% {
+    transform: translateX(100%);
+  }
+
+  80% {
+    transform: translateX(-30px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+// 垂直居中
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 文本一行
+@mixin aline {
+  white-space: nowrap;
+  /* 让文本不换行 */
+  overflow: hidden;
+  /* 隐藏溢出部分的文本 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+}
+
+// 文字渐变
+@mixin textlinear($color1: "#ffffff", $color2: "#ffd79b") {
+  background: linear-gradient(to bottom, $color1, $color2);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@mixin tips {
+  font-size: 50px;
+  font-family: "pm1";
+  color: #ffffff;
+}
+
+// 自定义动画
+@mixin anima($duration, $duration1, $duration2, $duration3 ) {
+  >div:nth-child(1) {
+    animation-duration: $duration1 !important;
+  }
+
+  >div:nth-child(2) {
+    animation-duration: $duration2 !important;
+  }
+
+  >div:nth-child(3) {
+    animation-duration: $duration3 !important;
+  }
+
+  >div:nth-child(4) {
+    animation-duration: $duration !important;
+  }
+}
+
+// 左侧
+@mixin CustomTransLeftAnimationGoing(
+  $duration: 2s,
+  $duration1: 1s,
+  $duration2: 1.5s,
+  $duration3: 2s) {
+  >div {
+    animation: leftSlide $duration1 linear;
+  }
+
+  @include anima($duration, $duration1, $duration2, $duration3 );
+}
+
+// 右侧
+@mixin CustomTransRightAnimationGoing(
+  $duration: 2s,
+  $duration1: 1s,
+  $duration2: 1.5s,
+  $duration3: 2s) {
+  >div {
+    animation: rightSlide $duration1 linear;
+  }
+
+  @include anima($duration, $duration1, $duration2, $duration3 );
+}
+
+@keyframes mymove {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, -10px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/*Safari 和 Chrome:*/
+@-webkit-keyframes mymove {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, -10px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@mixin cannotSelect{
+  user-select: none; /* 禁止用户选择文本 */
+  -webkit-user-select: none; /* 兼容旧版 WebKit 浏览器 */
+  -moz-user-select: none; /* 兼容 Firefox */
+  -ms-user-select: none; /* 兼容旧版 IE */
+}

@@ -1,0 +1,8 @@
+// 下拉框 去除选中或hover出现的边框
+.el-dropdown-link:focus-visible {
+    outline: none !important; /* 或者其他适当的焦点样式 */
+}
+// el-input文本域去掉右下角的图标
+.el-textarea__inner {
+    resize: none !important;
+}

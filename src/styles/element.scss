@@ -1,0 +1,137 @@
+.el-pagination{
+    border-radius: 6px;
+    background: none;
+    button{
+        border: 1px solid #004cff33;
+        border-radius: 6px;
+        background: none!important;
+        .el-icon {
+            color: #004CFF;
+            transform: scale(1.8)
+        }
+    }
+    li{
+        border: 1px solid #004cff33;
+        border-radius: 6px;
+        background: none!important;
+        font-family: pm2;
+        color:#ADCEFF!important;
+        font-size: 14px;
+        &:hover{
+            color:#FFFFFF!important;
+        }
+    }
+    .active{
+        color:#ADCEFF!important;
+    }
+
+}
+.el-select {
+    width: 100%;
+    background: #004cff1a;
+    .el-select__wrapper {
+        background: #004cff1a;
+        border: 1px solid #004cff33;
+        border-radius: 4px;
+        min-height: 48px;
+    }
+    .el-select__placeholder {
+        height: 25px;
+        opacity: 0.4;
+        font-family: pm2;
+        font-weight: 400;
+        font-size: 18px;
+        color: #D1EAFF;
+        letter-spacing: 0;
+    }
+    .el-select__caret {
+        color: #004CFF !important;
+        width: 16px;
+        height: 8px;
+        font-size: 20px;
+    }
+}
+
+.el-popper.is-light.selectStyle {
+    background-color: #202d8f !important;
+    opacity: 0.8;
+    border: 1px solid #004cff33 !important;
+    min-width: 100px !important;
+}
+.selectStyle.el-popper[data-popper-placement^=bottom] .el-popper__arrow::before {
+    background: rgba(0, 136, 255, 0.1) !important;
+    border: 1px solid #004cff33 !important;
+}
+.selectStyle.el-popper[data-popper-placement^=top] .el-popper__arrow::before {
+    background: #004CFF !important;
+    border: 1px solid #004CFF !important;
+}
+.selectStyle {
+    .el-select-dropdown__item.is-hovering {
+        background-color: #004cff33;
+    }
+    .el-select-dropdown__item.hover,
+    .el-select-dropdown__item:hover {
+        background: #004CFF !important;
+    }
+    .el-select-dropdown__item.selected,
+    .el-select-dropdown__item:hover {
+        background: #004CFF !important;
+    }
+    .el-select-dropdown__item {
+        color: #D1EAFF  !important;
+        font-weight: 700;
+    }
+
+}
+
+// 清除掉表格的样式
+.el-table {
+    --el-table-header-bg-color: none; // 表格头部的背景色
+    --el-table-tr-bg-color: none; // 表格内容的背景色
+    --el-table-row-hover-bg-color: none; // 悬停时的颜色
+    --el-table-header-text-color: none; // 头部标题的字体颜色
+    --el-table-text-color: #FFFFFF; // 表格内容的颜色
+    --el-table-border: none; // 表格底部条纹的颜色
+    --el-table-border-color: none 
+}
+
+.even-row {
+    background-color: #122E53 !important; /* 偶数行背景色 */
+    height: 40px;
+    font-family: base;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.odd-row {
+    background-color: none !important; /* 奇数行背景色 */
+    height: 40px;
+    font-family: base;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+ 
+.el-dialog {
+    --el-dialog-bg-color: #051029;
+    --el-dialog-box-shadow: 0 0 10px 0 #00102e66;
+    --el-dialog-title-font-size: 14px;
+    --el-dialog-content-font-size: 12px;
+    --el-dialog-font-line-height: 12px;
+    --el-dialog-padding-primary: 16px 0px 17px 16px;
+    --el-dialog-border-radius: 4px;
+    border: 2px solid #5f9aff66;
+    box-sizing: border-box;
+    --el-dialog-padding-primary: none !important;
+
+}
+.el-dialog__body {
+    color: #FFFFFF !important;
+    font-size: 12px !important;
+    .title{
+        font-size: 14px !important;
+        color: #D1EAFF !important;
+    }
+}
+

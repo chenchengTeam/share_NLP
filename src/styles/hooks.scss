@@ -1,0 +1,23 @@
+// 垂直居中
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 文本一行
+@mixin aline {
+  white-space: nowrap;
+  /* 让文本不换行 */
+  overflow: hidden;
+  /* 隐藏溢出部分的文本 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+}
+
+// 文字渐变
+@mixin textlinear($color1: "#ffffff", $color2: "#ffd79b") {
+  background: linear-gradient(to bottom, $color1, $color2);
+  -webkit-background-clip: text;
+  color: transparent;
+}

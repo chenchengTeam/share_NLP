@@ -1,0 +1,18 @@
+// 重置样式
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// 布局模块
+// body容器
+body,#app {
+    width: 100vw;
+    height: 100vh;
+    font-size: $base-font;
+    overflow-x: hidden;
+  }
+  
+  
+
